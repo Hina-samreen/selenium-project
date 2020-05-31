@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation">
+  
+  <listeners>
+     
+        
+         <listener class-name="de.ecom.listener.Listener"/>
+         <listener class-name="de.ecom.listener.ExtentReportHtml"/>
+         
+
+ </listeners>
+ 
+ <test name="FunctionalTests">
+ 	<classes>
+ 	
+ 	 <class name="de.ecom.testfaelle.Tf01_SortierungNachNamenTest"/>
+ 	<class name="de.ecom.testfaelle.Tf02_KostenVergleichTest"/> 
+ 	<class name="de.ecom.testfaelle.Tf03_HinzufuegungVerfuegbarenProducteTest"/>
+ 	<class name="de.ecom.testfaelle.Tf04_VergleichVonZweiProdukteTest"/>
+ 	<class name="de.ecom.testfaelle.Tf05_KontoErstellenUndTeilenTest"/>
+    <class name="de.ecom.testfaelle.Tf06_KaufDesProduktsMitRegistriertenEMailTest"/> 
+ 	</classes> 
+ 	
+ </test>
+ <!-- This parameter will be passed this test only -->
+  <test name="BackendTests">
+ 	 <parameter name="optional-value" value="http://live.demoguru99.com/index.php/backendlogin/"/> 
+ 		<classes>
+ 	
+ 				<class name="de.ecom.testfaelle.Tf07_ExportierensendenAllerBestellungenAlsCSVDatei"/>
+ 	
+ 	</classes>
+ 
+ </test> 
+   
+    <!--   <test name="Tf01_SortierungNachNamenTest">
+     <classes>
+      <class name="de.ecom.testfaelle.Tf01_SortierungNachNamenTest"/>
+      </classes>
+      </test>-->
+    <!--  <class name="de.ecom.testbasis.TestBasis"/> 
+      <class name="de.ecom.testfaelle.Tf04_VergleichVonZweiProdukteTest"/>
+    <class name="de.ecom.testfaelle.Tf05_KontoErstellenUndTeilenTest"/> 
+        <class name="de.ecom.testfaelle.Tf02_KostenVergleichTest"/> -->
+        
+		 <!--  <test name="Tf07_ExportierensendenAllerBestellungenAlsCSVDatei">-->
+       <!--   This parameter will be passed this test only -->
+       <!--   <parameter name="optional-value" value="http://live.demoguru99.com/index.php/backendlogin/" />
+        <classes>
+           <class name="de.ecom.testfaelle.Tf07_ExportierensendenAllerBestellungenAlsCSVDatei"/>
+         </classes>
+         </test> -->
+        <!--   <test name="Tf03_HinzufuegungVerfuegbarenProducteTest">
+         <classes>
+      <class name="de.ecom.testfaelle.Tf03_HinzufuegungVerfuegbarenProducteTest"/>
+      </classes>
+      </test> -->
+  
+</suite> <!-- Automation -->
